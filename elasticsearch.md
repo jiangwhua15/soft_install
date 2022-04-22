@@ -36,3 +36,10 @@ type=rpm-md
 [root@localhost elastic]# yum install logstash
 
  ```
+
+#### 使用配置logstash
+
+```bash
+ # logstash 默认命令行目录
+ /usr/share/logstash/bin/logstash
+```
