@@ -89,6 +89,41 @@ Could not find log4j2 configuration at path /usr/share/logstash/config/log4j2.pr
        "message" => "ok"
 }
 
+```
+
+##### logstash例子2
+
+```
+# 创建 weblog.conf
+
+[root@localhost elastic]# vim weblog.conf
+
+input {
+  tcp {
+     port => 9900
+  }
+}
+
+output {
+  stdout { }
+}
+
+# 启动logstash
+[root@localhost elastic]# /usr/share/logstash/bin/logstash -f /home/elastic/weblog.conf 
+
+# 打开另外终端
+[root@localhost elastic]# echo 'hello logstash' | nc localhost 9900
+
+# 输出结果
+
+{
+         "event" => {
+        "original" => "hello logstash"
+    },
+    "@timestamp" => 2022-04-22T10:27:12.310898Z,
+      "@version" => "1",
+       "message" => "hello logstash"
+}
 
 
 
