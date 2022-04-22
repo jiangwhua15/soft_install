@@ -35,7 +35,4 @@ type=rpm-md
 # 安装
 [root@localhost elastic]# yum install logstash
 
-
- 
- 
  ```
