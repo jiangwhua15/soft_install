@@ -43,7 +43,7 @@ type=rpm-md
  # logstash 默认命令行目录
  /usr/share/logstash/bin/logstash
 ```
-##### logstash 例子
+##### logstash 例子一
 
 ```
 # 创建 heartbeat.conf
