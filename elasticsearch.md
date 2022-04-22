@@ -43,3 +43,26 @@ type=rpm-md
  # logstash 默认命令行目录
  /usr/share/logstash/bin/logstash
 ```
+##### logstash 例子
+
+```
+# 创建 heartbeat.conf
+
+[root@localhost elastic]# vim heartbeat.conf
+
+input {
+  heartbeat {
+    interval => 10
+    type => "heartbeat"
+  }
+}
+
+output {
+  stdout {
+    codec => rubydebug
+  }
+}
+
+[root@localhost elastic]# /usr/share/logstash/bin/logstash -f /home/elastic/heartbeat.conf
+
+```
