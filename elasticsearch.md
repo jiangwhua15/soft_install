@@ -1,12 +1,14 @@
 
-### Docker-composer 安装 Elasticsearch
+#### Docker-composer 安装 Elasticsearch
 
-#### Step 1：docker启动elasticsearch
+##### Step 1：docker启动elasticsearch
 
 ```
- docker run --name es01 --net elastic -p 9200:9200 -p 9300:9300 -it elasticsearch:8.1.2
+ [root@localhost elastic]# docker run -d --name es01 --net elastic -p 9200:9200 -p 9300:9300 -it elasticsearch:8.1.2
+3e4bb6f3ae0ce1d771ab6c15e1cf3416c543f9635b2efea094bc15b3894b8d98
+
 ```
-##### Setp2： 打开另外一个终端，进入Elasticsearch容器
+###### Setp2： 打开另外一个终端，进入Elasticsearch容器,并生成证书
 ```
 # 进入容器
 [root@localhost ~]# docker exec -it es01 /bin/bash
@@ -40,6 +42,21 @@ Please enter the desired output file [elastic-stack-ca.p12]:
 Enter password for elastic-stack-ca.p12 : 
 elasticsearch@5c76f60793a1:~$ ls
 LICENSE.txt  NOTICE.txt  README.asciidoc  bin  config  data  elastic-stack-ca.p12  jdk  lib  logs  modules  plugins
+
+```
+
+##### Step3:退出容器
+```
+# 复制证书到 docker-composer.yml 所在目录
+[root@localhost elastic]# docker cp es01:/usr/share/elasticsearch/elastic-stack-ca.p12 .
+[root@localhost elastic]# ls
+config  data  docker-compose.yml  elastic-stack-ca.p12  logs  plugins
+
+# 停止并且销毁容器
+[root@localhost elastic]# docker stop es01
+es01
+[root@localhost elastic]# docker rm es01
+es01
 
 ```
 
