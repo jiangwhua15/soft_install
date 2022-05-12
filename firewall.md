@@ -1,4 +1,4 @@
-### [返回目录](https://github.com/jiangwhua15/soft_install/READMAD.md)
+### [返回目录](https://github.com/jiangwhua15/soft_install)
 #### 端口转发命令
 
 ```
