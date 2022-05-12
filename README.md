@@ -2,12 +2,12 @@
 
 ### Centos系统
 
-####  [Firewall使用](https://github.com/jiangwhua15/soft_install/blob/main/firewall.md)
+####  [Firewall使用][firewall]
 ##### 一、[端口转发][firewall]
 
 
 
 
 
-[firewall]: http://runoob.com/
-[runoob]: http://www.runoob.com/
+[firewall]: https://github.com/jiangwhua15/soft_install/blob/main/firewall.md
+
