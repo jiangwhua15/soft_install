@@ -8,6 +8,6 @@
 
 
 
-[firewall]：http://www.runoob.com/
 
+[firewall]: http://runoob.com/
 [runoob]: http://www.runoob.com/
