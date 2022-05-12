@@ -1,4 +1,4 @@
-[返回目录][main_url]
+### [返回目录][main_url]
 #### Firewall 防火墙命令
 ##### 一、端口转发
 
@@ -8,4 +8,4 @@ firewall-cmd --add-forward-port=port=5557:proto=tcp:toport=5555:toaddr=8.212.183
 ```
 
 
-[mian_url]: https://github.com/jiangwhua15/soft_install
+[main_url]: https://github.com/jiangwhua15/soft_install
