@@ -1,5 +1,6 @@
 ### [返回目录](https://github.com/jiangwhua15/soft_install)
-#### 端口转发命令
+#### Firewall 防火墙命令
+##### 一、端口转发
 
 ```
 firewall-cmd --add-forward-port=port=5556:proto=tcp:toport=5555:toaddr=8.212.144.66 --permanent
