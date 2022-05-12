@@ -9,5 +9,5 @@
 
 
 
-[firewall]: https://github.com/jiangwhua15/soft_install/firewall/README.md
-[firewall#端口转发]: https://github.com/jiangwhua15/soft_install/firewall/README.md#端口转发
+[firewall]: https://github.com/jiangwhua15/soft_install/tree/main/firewall
+[firewall#端口转发]: https://github.com/jiangwhua15/soft_install/tree/main/firewall#端口转发
